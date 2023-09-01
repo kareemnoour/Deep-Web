@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 100vh;
+    width: 100%;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.container h1{
+    font-size: 100px;
+    margin-bottom: 50px;
+    animation: smokey 10s ;
+}
+
+input{
+    padding: 25px;
+    width: 100%;
+    outline: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    caret-color: white;
+    text-align: center;
+    animation: smokey 7s ;
+}
+
+p{
+    background-color: #00000099;
+    width: fit-content;
+    border-radius: 20px;
+    margin: auto;
+    padding: 15px;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    display: none;
+}
+
+input:focus-within ~ p{
+   display: block;
+}
+
+span{
+    color: #ffffff8a;
+}
+
+.h1{
+    font-size: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    opacity: 0; 
+    animation: show 7s;
+}
+.h11{
+    font-size: 100px;
+    margin-top: 50px;
+    text-align: center;
+}
+.card-con{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 60px 90px;
+}
+.card-body{
+    width: 250px;
+    height: 300px;
+    background-color: #9e9e9e33;
+    font-size: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.card-body:hover{
+    transform: scale(.95);
+}
+@keyframes smokey {
+    0%{opacity: 0;}
+
+    30%{opacity: 0.1;}
+
+    60%{opacity: 0.2;}
+
+    80%{opacity: 0.3;}
+
+    90%{opacity: 0.5;}
+
+    95%{opacity: 0.8;}
+
+    100%{opacity: 1.0}; 
+}
+
+@keyframes show{
+    0%,100%{opacity: 0;}
+
+    50%{opacity: 1;}
+}
+
+
+@media(max-width:767px){
+    
+    .container h1{
+        font-size: 60px;
+    }
+}

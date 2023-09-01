@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightmare</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        h1{
+            font-size: 70px;
+            color: blue;
+        }
+
+        #btn{
+            padding: 10px 40px;
+            background-color: transparent;
+            border-radius: 8px;
+            border: 1px solid blue;
+            cursor: pointer;
+            transition: 0.5s;
+            margin-top: 5px;
+            color: white;
+        }
+        #btn:hover{
+            transform: scale(.95);
+        }
+        #video{
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+        @media(max-width:767px){
+            h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <video src="./Videos/فيديو رعب مفاجئ لا تشاهده بالليل.mp4" id="video" oncontextmenu="return false" style="display: none;"></video>
+
+    <div class="info" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100vh; flex-direction: column; background-color: black;">
+        <h1>Are You Ready!</h1>
+        <button id="btn">Ok</button> 
+    </div>
+</body>
+
+
+<script>
+    const btn = document.getElementById('btn');
+
+    btn.addEventListener("click", () => {
+        const ele = document.querySelector(".info")
+        ele.remove()
+
+        let video = document.getElementById("video");
+        video.style.display = "block";
+        video.requestFullscreen()
+        video.play()
+    })
+</script>
+</html>
