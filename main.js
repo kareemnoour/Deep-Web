@@ -63,19 +63,6 @@ function page2() {
     title.style.animationName = "";
     title.innerHTML = "Pick A Side";
 
-
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth < 768) {
-            title.style.cssText = "font-size:60px; margin-top:120px";
-            cardCon.style.cssText = "margin:60px 10px;";
-        }else{
-            title.style.cssText = "font-size:100px; margin-top:50px";
-            cardCon.style.cssText = "margin:60px 90px;";
-        }
-    })
-   
-
     CreateCard("red",cardCon);
     CreateCard("blue",cardCon);
 
@@ -89,10 +76,6 @@ function CreateCard(color,con) {
     cardBody.setAttribute('class', 'card-body');
     cardBody.innerHTML = "?";
     cardBody.style.borderColor = color;
-
-    window.addEventListener("resize", () => {
-        window.innerWidth < 768 ? cardBody.style.cssText += "width:150px; height:250px; font-size:100px":cardBody.style.cssText += "width:250px; height:300px; font-size:200px"; 
-    })
     
     con.appendChild(cardBody);
     document.body.style.display = "block";
