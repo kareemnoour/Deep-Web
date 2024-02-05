@@ -49,6 +49,23 @@ input{
     text-align: center;
     animation: smokey 7s ;
 }
+#go{
+    padding: 3px 8px;
+    position: absolute;
+    right: 10px;
+    top: 86%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 8px;
+    display: none;
+}
+#go:hover{
+    background-color: #ffffff10;
+}
 
 p{
     background-color: #00000099;
@@ -134,6 +151,10 @@ span{
         font-size: 60px;
     }
 
+    #go{
+        display: block;
+    }
+    
     .card-con{
         margin: 60px 10px;
     }
